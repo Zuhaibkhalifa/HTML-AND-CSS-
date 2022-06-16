@@ -1,0 +1,89 @@
+.main-head {
+  width: 95%;
+  margin: 0 0 0 auto;
+}
+nav {
+  @include flex(space-between, center, row);
+  min-height: 10vh;
+  width: 60%;
+  flex-wrap: wrap;
+  .logo {
+    @include flex(flex-start, center, row);
+    flex: 1 1 10rem;
+    h1 {
+      margin: 2rem;
+    }
+  }
+  ul {
+    @include flex(space-around, center, row);
+    flex: 1 1 50rem;
+  }
+}
+.intro {
+  width: 90%;
+  margin: 0 0 0 auto;
+  min-height: 90vh;
+  flex-wrap: wrap;
+  @include flex(space-around, center, row);
+
+  h2 {
+    font-size: 8rem;
+    padding-top: 2rem;
+    background-image: $gradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    display: inline-block;
+  }
+  h3 {
+    font-size: 6rem;
+    padding: 3rem 0;
+  }
+  p {
+    color: $grey;
+    font-size: 2.5rem;
+    padding-bottom: 2rem;
+  }
+  a {
+    margin-right: 2rem;
+  }
+}
+
+.active {
+  color: white;
+  background-color: $grey;
+  border-radius: 15px;
+  padding: 1rem 2rem;
+}
+#animate-1 {
+  animation: hands 1.5s ease infinite alternate-reverse;
+}
+#animate2 {
+  animation: rotat 1.5s infinite;
+}
+
+.projects {
+  width: 90%;
+  margin: 0 0 0 auto;
+  @include flex(space-between, center, row);
+  flex-wrap: wrap;
+  padding: 20rem;
+}
+
+@keyframes hands {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-30%);
+  }
+}
+
+@keyframes rotat {
+  from {
+    transform: translateZ(0deg);
+  }
+  to {
+    transform: translateZ(360deg);
+  }
+}

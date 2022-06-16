@@ -1,0 +1,277 @@
+/* Gloabal styles for the pages */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+button {
+  padding: 2rem 6rem;
+  border: none;
+  background-color: #5b5385;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background 1s ease-in-out;
+}
+
+h1 {
+  font-size: 4rem;
+}
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+a {
+  color: #f1faee;
+  text-decoration: none;
+}
+
+/*  Nav section with the logo */
+
+.main-head {
+  background-color: #151226;
+  color: #ffffff;
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  min-height: 10vh;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  align-items: center;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+nav ul {
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  list-style: none;
+}
+#logo {
+  flex: 2 1 40rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.8), transparent),
+    url("./images/pexels-pixabay-33545.jpg");
+  min-height: 90vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h3 {
+  padding: 3rem;
+}
+/* Locations Sections */
+
+#locations {
+  background: linear-gradient(rgba(0, 0, 0, 0.9), transparent),
+    url("./images/ny.jpg");
+  min-height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: -1;
+}
+.loc-head {
+  width: 90%;
+  margin: auto;
+}
+.loc-head h2 {
+  padding-bottom: 3rem;
+  text-decoration: underline;
+}
+.loc-head h3 {
+  padding: 3rem 0rem;
+}
+.cloud {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  opacity: 0.8;
+  width: 1000px;
+}
+.cloud-1 {
+  left: 0;
+  z-index: -2;
+  animation: cloudAnimation 20s infinite alternate ease-in-out;
+}
+
+.cloud-2 {
+  left: 500px;
+  animation: cloudAnimation 18s infinite alternate ease-in-out;
+}
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%);
+  }
+  to {
+    transform: translate(50%);
+  }
+}
+/* Benefits section  */
+
+.benefits-head {
+  background-color: #151226;
+  color: #f1faee;
+  text-align: center;
+  padding: 3rem;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.benefits-head h3 {
+  padding: 2rem;
+}
+
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  min-height: 70vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1 1 40rem;
+  text-align: center;
+  min-height: 40vh;
+  margin: 2rem 5rem;
+  background: #5b5385;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.3);
+}
+.card img {
+  height: 150px;
+}
+.card-img {
+  background-color: #706e7c;
+}
+.card h3,
+card p {
+  padding: 3rem;
+  font-size: x-large;
+}
+
+#contact {
+  min-height: 100vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), transparent),
+    url(./images/contact.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-head {
+  background: rgba(21, 21, 25, 0.8);
+  width: 65%;
+  border-radius: 20px;
+}
+.form-head {
+  text-align: center;
+  padding: 3rem;
+}
+.name-form,
+.mail-form {
+  text-align: center;
+  padding: 3rem;
+}
+.contact-head label {
+  margin: 0px 50px;
+  font-size: x-large;
+}
+.contact-head button {
+  width: 100%;
+  margin-top: 10rem;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  padding: 3rem;
+}
+.contact-head input {
+  padding: 2rem;
+  width: 50%;
+}
+
+footer {
+  color: white;
+  background: rgba(21, 21, 25, 0.8);
+}
+
+.footer-wrap {
+  display: flex;
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.footer-wrap ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  flex: 1 1 40rem;
+  align-items: center;
+}
+
+/* Mobile Version  */
+
+button:hover {
+  background: #1b182e;
+  border: 0.5px solid white;
+}
+
+@media screen and (max-width: 932px) {
+  nav {
+    text-align: center;
+  }
+  html {
+    font-size: 50%;
+  }
+  #logo {
+    padding: 2rem;
+  }
+  .cloud {
+    width: 300px;
+  }
+  footer h5 {
+    text-align: center;
+    padding: 2rem;
+  }
+}
